@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=cyrillic");
+
+body,
+html {
+  border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+html,body{
+  min-height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:hover {
+	transition: all .7s;
+}
+
+body {
+	font-family: "Noto Sans", sans-serif;
+	font-size: 26px;
+	color: #fff;
+	background: linear-gradient(to right  bottom, purple, crimson);
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.conteiner {
+	display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 350px;
+}
+.header{
+  padding-top: 120px;
+  min-height: 500px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+.avatar img {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 70px;
+}
+.nav-bar {
+  background-color: #0b1127;
+  flex-direction: column;
+  display: flex;
+  min-height: 50vh;
+	min-width: 200px;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+  min-width: 350px;
+  margin-bottom: 150px;
+  background-color: rgba();
+
+}
+
+.nav {
+	display: flex;
+	margin: 0;
+}
+
+.nav__list {
+	flex-direction: column;
+
+	display: flex;
+	padding: 0;
+	margin: 0;
+	font-size: 32px;
+	line-height: 32px;
+	color: #fff;
+	list-style: none;
+}
+
+.nav__item {
+	position: relative;
+	display: flex;
+	padding: 25px 117px;
+
+	margin-bottom: 50px;
+}
+
+.nav__item_active {
+	color: rgba(255,75,168, .9);
+}
+
+.nav__item:hover:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 8px;
+	height: 81px;
+
+	content: "";
+
+	background-color: #ff4ba8;
+}
+
+.nav__item:hover {
+	background-color: rgba(255,255,255, .03);
+
+	cursor: pointer;
+}
+
+.nav__item:active {
+	color: rgba(255,75,168, .9);
+
+	cursor: pointer;
+}
+.footer__nav-bar{
+  position: relative;
+  bottom: 0;
+  background-color: #0b1127;
+  min-height: 20vh;
+  min-width: 200px;
+  padding-bottom:  60;
+  margin: 0;
+}
+.social__list{
+  display: flex;
+  margin: 0 auto;
+  list-style: none;
+  margin: 50px;
+}
+.social__item{
+  margin-left: 20px;
+
+}
+
