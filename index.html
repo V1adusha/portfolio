@@ -7,15 +7,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="conteiner">
-
-    <div class="nav-bar">
-
+  <div class="container">
+  <div class="index-column__right">
     	<header class="header">
     	 <div class="avatar">
          <img src="img/avatar.png" alt="avatar">
        </div>
-       <nav class="nav">
+       <nav class="nav-bar">
          <ul class="nav__list">
            <li class="nav__item nav__item_active">About</li>
            <li class="nav__item">Work</li>
@@ -25,8 +23,7 @@
        </nav>
     	</header>
 
-    </div>
-    <footer class="footer__nav-bar">
+      <footer class="footer__nav-bar">
         <ul class="social__list">
           <li class="social__item">git</li>
           <li class="social__item">vk</li>
@@ -34,28 +31,32 @@
         </ul>
       </footer>
   </div>
-<!--
+
+  <div class="index-column__left">
     <main class="entry">
       <h2 class="entry__title">About</h2>
       <section class="about">
-        <h1 class="about__title">Vladislav Umarov<span>.</span></h1>
+        <h1 class="about__title">VLADISLAV UMAROV</h1>
         <h3 class="about__subtitle">Freelance Product Designer</h3>
-        <p class="about__text">Currently curating designs for new
-           startups and founders. Also love
-           to code in Laravel and Ruby
+        <p class="about__text">На данный момент ищу работу, занимался самообучением,
+                  так что еще сыроват :). Но уже полюбил <span class="about__text_col">CSS</span> и влюбился в <span class="about__text_col">JavaScript</span>,
+                  да у нас есть проблемы, но мы с этим боримся! :)
          </p>
-         <p class="about__preview">Preavious Clients<span>/</span></p>
-         <ul class="about-menu menu__list ">
-           <li class="menu__items">icon</li>
-           <li class="menu__items">icon</li>
-           <li class="menu__items">icon</li>
-           <li class="menu__items">icon</li>
-         </ul>
-         <button class="btn">Hire me</button>
-         <button class="btn">Know more</button>
-         <b>Stay Hungry. Stay Foolish.</b>
+         <div class="preview">
+         <p class="preview__title">Preavious<br> Clients</p>
+           <ul class="preview-menu">
+             <li class="preview-menu__item">icon</li>
+             <li class="preview-menu__item preview-menu__item_active">icon</li>
+             <li class="preview-menu__item">icon</li>
+             <li class="preview-menu__item">icon</li>
+           </ul>
+         </div>
+         <button class="entry__btn">Hire me</button>
+         <button class="entry__btn entry__btn_disable">Know more</button>
       </section>
-      <div> -->
+      <b>Stay Hungry. Stay Foolish.</b>
+    </div>
+    </div>
         <!-- <img src="img/avatar-devel.png" width="200px" alt=""> -->
 
 </body>
