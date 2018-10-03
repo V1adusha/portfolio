@@ -192,7 +192,19 @@ body {
 }
 
 .social__item {
+  width: 40px;
+  height: 40px;
   margin-left: 20px;
+  opacity: 0.3;
+}
+.social__item:hover{
+  opacity: 1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 2px #fff;
+}
+.social__link{
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Основной контент*/
