@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
-	<title>Portfolio</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-  <div class="index-column__right">
-    	<header class="header">
-    	 <div class="avatar">
+  <div class="index-column__left">
+      <header class="header">
+       <div class="avatar">
          <img src="img/avatar.png" alt="avatar" a>
        </div>
        <nav class="nav-bar">
          <ul class="nav__list">
-           <li class="nav__item nav__item_active">About</li>
-           <li class="nav__item">Work</li>
-           <li class="nav__item nav__item_dis">Labs</li>
-           <li class="nav__item">Contact</li>
+           <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+           <li class="nav__item"><a class="nav__link nav__link_active" href="index.html">Work</a></li>
+           <li class="nav__item nav__item_dis"><a class="nav__link" href="">Labs</a></li>
+           <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
          </ul>
        </nav>
-    	</header>
+      </header>
 
       <footer class="footer__nav-bar">
         <ul class="social__list">
@@ -32,31 +32,22 @@
        </ul>
       </footer>
   </div>
-  <div class="index-column__left">
-    <main class="entry">
-      <h2 class="entry__title"><span class="entry__title_eff">About</span></h2>
-      <section class="about">
-        <h1 class="about__title">VLADISLAV UMAROV</h1>
-        <h3 class="about__subtitle">Freelance Product Designer</h3>
-        <p class="about__text">На данный момент ищу работу, занимался самообучением,
-                  так что еще сыроват :). Но уже полюбил <span class="about__text_col">CSS</span> и влюбился в <span class="about__text_col">JavaScript</span>,
-                  да у нас есть проблемы, но мы с этим боримся! :)
-         </p>
-         <button class="entry__btn entry__btn_left">Hire me</button>
-         <button class="entry__btn entry__btn_right">Know more</button>
-         <div class="preview">
-         <p class="preview__title">Preavious<br> Clients</p>
-           <ul class="preview-menu">
-             <li class="preview-menu__item">icon</li>
-             <li class="preview-menu__item preview-menu__item_active">icon</li>
-             <li class="preview-menu__item">icon</li>
-             <li class="preview-menu__item">icon</li>
-           </ul>
-         </div>
-         <b class="entry__slogan">Поставил цель, забудь о сомнениях.</b>
-      </section>
-    </main>
+  <div class="index-column__right">
+  <main class="work">
+    <div class="block-entry">
+    <h2 class="entry__title"><span class="entry__title_eff">Work</span></h2>
+    <form class="search">
+      <input class="search__input" id="input" type="text" autocomplete="off"/>
+      <label class="search__label" for="input"></label>
+      <button class="search__button" type="reset"></button>
+      <div class="search__border"><span class="search__border_span"></span></div>
+      <div class="search__close">x</div>
+    </form>
+    </div>
+  </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

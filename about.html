@@ -2,19 +2,77 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
 	<title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="header">
-	 <img src="" alt="logo">
-   <nav>
-     <ul>
-       <li>About</li>
-       <li>Work</li>
-       <li>Labs</li>
-       <li>Contact</li>
-     </ul>
-   </nav>
-	</header>
+  <div class="container">
+  <div class="index-column__left">
+    	<header class="header">
+    	 <div class="avatar">
+         <img src="img/avatar.png" alt="avatar" a>
+       </div>
+       <nav class="nav-bar">
+         <ul class="nav__list">
+           <li class="nav__item"><a class="nav__link nav__link_active">About</a></li>
+           <li class="nav__item"><a class="nav__link" href="index.html">Work</a></li>
+           <li class="nav__item nav__item_dis"><a class="nav__link" href="">Labs</a></li>
+           <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+         </ul>
+       </nav>
+    	</header>
+
+      <footer class="footer__nav-bar">
+        <ul class="social__list">
+          <li class="social__item"><a class="social__link" href="#"><img src="img/vk.svg" alt=""></a> </li>
+          <li class="social__item"><a class="social__link" href="#"><img src="img/google-plus.svg" alt=""></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img src="img/github.svg" alt=""></a></li>
+       </ul>
+      </footer>
+  </div>
+  <div class="index-column__right index-column__right_avatar">
+    <main class="entry">
+      <h2 class="entry__title"><span class="entry__title_eff">About</span></h2>
+      <section class="about">
+        <h1 class="about__title">VLADISLAV UMAROV</h1>
+        <h3 class="about__subtitle">Freelance Front-end Developer</h3>
+        <p class="about__text">На данный момент ищу работу, занимался самообучением,
+                  так что еще сыроват :). Но уже полюбил <span class="about__text_col">CSS</span> и влюбился в <span class="about__text_col">JavaScript</span>,
+                  да у нас есть проблемы, но мы с этим боримся! :)
+         </p>
+         <button class="entry__btn entry__btn_left">Hire me</button>
+         <button class="entry__btn entry__btn_right">Know more</button>
+         <div class="preview">
+         <p class="preview__title">Developer<br>Technologies</p>
+           <ul class="preview-menu">
+             <li class="preview-menu__item">
+              <a class="preview-menu__link" href="#">
+                <img src="img/html.svg" alt="">
+              </a>
+             </li>
+             <li class="preview-menu__item preview-menu__item_active">
+              <a class="preview-menu__link" href="#">
+                <img src="img/js.svg" alt="">
+              </a>
+             </li>
+             <li class="preview-menu__item">
+              <a class="preview-menu__link" href="#">
+                <img src="img/css.svg" alt="">
+              </a>
+             </li>
+             <li class="preview-menu__item">
+              <a class="preview-menu__link preview-menu__link_mod" href="#">
+                <img src="img/jquery.svg" alt="">
+              </a>
+             </li>
+           </ul>
+         </div>
+         <b class="entry__slogan">Поставил цель, забудь о сомнениях.</b>
+      </section>
+    </main>
+  </div>
+
 </body>
 </html>

@@ -4,10 +4,6 @@
   transition: all 1s;
 }
 
-:active {
-  transition: all .1s;
-}
-
 body,
 html {
   width: 100vw;
@@ -15,11 +11,11 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-
-  border: 0 none;
+  box-sizing: border-box;
 }
 
 body {
+  box-sizing: inherit;
   font-family: "Noto Sans", sans-serif;
   font-size: 26px;
   font-weight: 400;
@@ -34,19 +30,19 @@ body {
 /*   Разметка сетки на две части  */
 .container {
   flex-direction: row;
+
   display: flex;
   min-height: 100vh;
 
   background-color: rgba(10,17,42, .7);
 }
-.index-column__right {
+
+.index-column__left {
   flex-direction: column;
 
   display: flex;
   max-width: 350px;
   min-height: 100%;
-
-  background-color: rgba(10,17,42, .6);
 }
 
 .container:before {
@@ -66,7 +62,7 @@ body {
   filter: blur(3px);
 }
 
-.index-column__left {
+.index-column__right {
   position: relative;
   flex-direction: column;
 
@@ -76,17 +72,24 @@ body {
 
   background-color: rgba(10,17,42, .7);
 }
-.index-column__left:after{
-  content: "";
+
+.index-column__right_avatar:after {
   position: absolute;
-  top:250px;
-  left:  620px;
-  height: 700px;
+  top: 250px;
+  left: 620px;
+
   width: 450px;
+  height: 700px;
+
+  content: "";
+
   background-image: url(../img/avatar-devel.png);
-  background-size: 450px;
   background-repeat: no-repeat;
+  background-size: 450px;
+
+  opacity: .7;
 }
+
 /*Боковое меню*/
 .header {
   min-width: 200px;
@@ -114,12 +117,12 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
+  margin-bottom: 140px;
 
   font-size: 32px;
   line-height: 32px;
   color: #fff;
   list-style: none;
-  margin-bottom: 140px;
 }
 
 .nav__item {
@@ -129,12 +132,8 @@ body {
   margin-bottom: 50px;
 }
 
-.nav__item_active {
-  color: rgba(255,75,168, .9);
-}
-
 /* Ховер эффекты */
-.nav__item_active:before {
+.nav__link_active:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -142,7 +141,6 @@ body {
   width: 8px;
   height: 81px;
 
-  content: "";
   content: "";
 
   background-color: #ff4ba8;
@@ -167,10 +165,21 @@ body {
   cursor: pointer;
 }
 
-.nav__item:active {
+.nav__link:active {
   color: rgba(255,75,168, .9);
 
+  transition: .1s;
+
   cursor: pointer;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__link_active {
+  color: rgba(255,75,168, .9);
 }
 
 /* Подвал с соцсетями */
@@ -180,7 +189,6 @@ body {
 
   min-width: 200px;
   min-height: 20vh;
-
 }
 
 .social__list {
@@ -195,17 +203,23 @@ body {
   width: 40px;
   height: 40px;
   margin-left: 20px;
-  opacity: 0.3;
+
+  opacity: .3;
 }
-.social__item:hover{
-  opacity: 1;
+
+.social__item:hover {
+  box-shadow: 0 0 2px 2px #fff;
   border-radius: 50%;
-  box-shadow: 0px 0px 2px 2px #fff;
+
+  opacity: 1;
 }
-.social__link{
+
+.social__link {
   text-decoration: none;
   color: #fff;
 }
+
+/*==============================*/
 
 /* Основной контент*/
 .entry {
@@ -214,9 +228,8 @@ body {
   display: flex;
   width: 570px;
   padding: 110px 5px 0 5px;
-  padding-top: 110px;
   margin: 0;
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 .entry__title_eff {
@@ -231,7 +244,7 @@ body {
   left: 0;
 
   width: 100%;
-  height: 2px;
+  height: 4px;
 
   content: "";
 
@@ -288,8 +301,9 @@ body {
 
 .preview {
   flex-direction: row;
-  margin-bottom: 130px;
+
   display: flex;
+  margin-bottom: 130px;
 }
 
 .preview__title {
@@ -302,7 +316,7 @@ body {
 .preview__title::after {
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 120px;
 
   content: "|";
   font-size: 35px;
@@ -344,7 +358,19 @@ body {
 }
 
 .preview-menu__item {
+  margin-top: -15px;
   margin-left: 15px;
+
+  opacity: .3;
+}
+
+.preview-menu__item:hover {
+  opacity: 1;
+}
+
+.preview-menu__link img {
+  width: 50px;
+  height: 50px;
 }
 
 .entry__btn:hover {
@@ -355,17 +381,153 @@ body {
   border: 2px solid rgba(255,255,255, .7);
   border-radius: 200px 200px 200px 200px;
 }
-.entry__slogan{
+
+.entry__slogan {
   position: relative;
+
   margin: 0;
-  color: rgba(255,255,255, 0.6);
+
+  color: rgba(255,255,255, .6);
 }
-.entry__slogan:before{
-  content: url(../img/quote-left.svg);
+
+.entry__slogan:before {
   position: absolute;
-  top:-40px;
+  top: -40px;
   left: -15px;
   z-index: -1;
+
   width: 20px;
   height: 20px;
+
+  content: url(../img/quote-left.svg);
 }
+/*================ Block Work ======================*/
+.block-entry{
+  display: flex;
+  justify-content: space-between;
+  width: 1050px;
+  padding: 110px 5px 0 5px;
+  margin: 0;
+  margin-left: 60px;
+
+}
+.search {
+  width: 550px;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  top: -14px;
+}
+.search__input {
+  width: 100%;
+  height: 100%;
+  padding: 0 65px 25px 60px;
+  position: absolute;
+  z-index: 1;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ddd;
+  font-size: 28px;
+  letter-spacing: 0.3px;
+  transform-origin: 10%;
+  transform: scaleX(0);
+  font-family: "PT Sans", sans-serif;
+}
+.search__button {
+  position: absolute;
+  right: 60px;
+  bottom: 33px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transform: rotate(45deg);
+  -webkit-tap-highlight-color: transparent;
+}
+.search__button::-moz-focus-inner {
+  border: 0;
+}
+.search__label {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 325px;
+  height: 77px;
+  line-height: 95px;
+  color: #ddd;
+  font-size: 28px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  overflow: hidden;
+}
+.search__label div {
+  white-space: pre;
+}
+.search__border {
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  right: 47px;
+  bottom: 32px;
+  transform: rotate(45deg);
+  background-color: transparent;
+  cursor: pointer;
+}
+.search__text {
+  font-size: 42px;
+  opacity: 0;
+  pointer-events: none;
+}
+.search:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 25px;
+  left: 40px;
+  top: 40px;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.search.edge:before {
+  opacity: 1;
+}
+.search__close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 5;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.search__close.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0.4s;
+}
+.search__border_span {
+  width: 150%;
+  position: relative;
+  display: inline-block;
+}
+
+.search__border_span:after {
+  position: absolute;
+  top: -30px;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  content: "";
+  background-color: rgba(255,255,255, 1);;
+}
+
