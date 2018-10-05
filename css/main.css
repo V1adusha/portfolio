@@ -378,9 +378,11 @@ a {
 
   opacity: .3;
 }
-.preview-menu__item_active{
+
+.preview-menu__item_active {
   opacity: 1;
 }
+
 .preview-menu__item:hover {
   opacity: 1;
 }
@@ -606,9 +608,9 @@ a {
   min-width: 760px;
   padding-top: 15px;
   margin-left: 60px;
-  overflow: -moz-scrollbars-none;
   overflow-x: hidden;
   overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
 
   -ms-overflow-style: none;
 }
