@@ -128,3 +128,12 @@ function cloneLbl() {
   clonedLbl = document.createElement('div');
   clonedLblWrap.appendChild(clonedLbl);
 };
+
+
+
+
+
+
+
+
+
