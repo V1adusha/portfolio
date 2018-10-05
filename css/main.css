@@ -27,7 +27,8 @@ body {
 
   background: linear-gradient(to right  bottom, purple, crimson) no-repeat;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -137,6 +138,7 @@ a{
 
 .nav__item {
   position: relative;
+
   padding: 25px;
   margin-bottom: 50px;
 }
@@ -170,6 +172,7 @@ a{
 
 .nav__item:hover {
   background-color: rgba(255,255,255, .03);
+
   cursor: pointer;
 }
 
@@ -182,12 +185,12 @@ a{
 }
 
 .nav__link {
-  text-decoration: none;
   padding: 25px 117px;
+  margin-bottom: 50px;
 
   text-align: center;
+  text-decoration: none;
   color: #fff;
-  margin-bottom: 50px;
 }
 
 .nav__link_active {
@@ -375,7 +378,9 @@ a{
 
   opacity: .3;
 }
-
+.preview-menu__item_active{
+  opacity: 1;
+}
 .preview-menu__item:hover {
   opacity: 1;
 }
@@ -588,6 +593,7 @@ a{
 
   background-color: rgba(255,255,255, 1);;
 }
+
 /*============== Gallery style ===============*/
 .gallery {
   flex-direction: row;
@@ -617,16 +623,19 @@ a{
   margin: 0 auto;
   margin-bottom: 70px;
 }
-.gallery__img:hover{
+
+.gallery__img:hover {
+  box-shadow: 0 0 5px 1px rgba(255,255,255, .5);
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgba(255,255,255, .5);
 }
-.gallery__text{
-  text-align: center;
+
+.gallery__text {
   font-size: 26px;
-  color: rgba(255,255,255, 0.8);
+  text-align: center;
+  color: rgba(255,255,255, .8);
 }
-.gallery__link{
+
+.gallery__link {
 }
 
 .gallery_top {
@@ -645,8 +654,9 @@ a{
   box-shadow: 0 4px 5px 7px rgba(0,0,0, .7);
   border-radius: 20%;
 }
-.gallery_bot{
-   position: relative;
+
+.gallery_bot {
+  position: relative;
   top: 0;
 
   width: 73.8%;
