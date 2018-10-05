@@ -7,7 +7,7 @@
 html {
   box-sizing: border-box;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -16,7 +16,7 @@ html {
 body {
   box-sizing: inherit;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 0;
   margin: 0;
 
@@ -408,6 +408,7 @@ body {
 
 /*================ Block Work ======================*/
 .work {
+	height: 100%;
   max-width: 100%;
 }
 
@@ -582,11 +583,12 @@ body {
 .gallery {
   flex-direction: row;
   flex-wrap: wrap;
-
   display: flex;
-  height: 100vh;
+height: 800px;
   margin-left: 60px;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
 }
 
 .gallery__item {
@@ -595,4 +597,5 @@ body {
   margin: 0;
   margin-right: 20px;
   margin-bottom: 70px;
+
 }
