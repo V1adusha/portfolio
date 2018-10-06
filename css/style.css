@@ -3,7 +3,12 @@
 :hover {
   transition: all .7s;
 }
-
+::-webkit-scrollbar{
+	display: none;
+}
+::-moz-scrollbar{
+	width: 0;
+}
 html {
   box-sizing: border-box;
   width: 100vw;
@@ -11,6 +16,7 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+
 }
 
 body {
@@ -24,13 +30,17 @@ body {
   font-size: 26px;
   font-weight: 400;
   color: #fff;
-
+	cursor: url(../cur1089.cur), progress !important;
   background: linear-gradient(to right  bottom, purple, crimson) no-repeat;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  cursor: url(../cur1089.cur), progress !important;
+}
+button{
+	cursor: url(../cur1089.cur), progress !important;
 }
 
 /*   Разметка сетки на две части  */
@@ -138,7 +148,6 @@ a {
 
 .nav__item {
   position: relative;
-
   padding: 25px;
   margin-bottom: 50px;
 }
@@ -172,16 +181,12 @@ a {
 
 .nav__item:hover {
   background-color: rgba(255,255,255, .03);
-
-  cursor: pointer;
 }
 
 .nav__link:active {
   color: rgba(255,75,168, .9);
-
   transition: .1s;
 
-  cursor: pointer;
 }
 
 .nav__link {
@@ -191,10 +196,12 @@ a {
   text-align: center;
   text-decoration: none;
   color: #fff;
+
 }
 
 .nav__link_active {
   color: rgba(255,75,168, .9);
+
 }
 
 /* Подвал с соцсетями */
@@ -406,14 +413,14 @@ a {
 
   margin: 0;
 
-  color: rgba(255,255,255, .6);
+  color: rgba(255,255,255, .7);
 }
 
 .entry__slogan:before {
   position: absolute;
   top: -40px;
   left: -15px;
-  z-index: -1;
+  z-index: 0;
 
   width: 20px;
   height: 20px;
@@ -481,7 +488,7 @@ a {
   outline: none;
   transform: rotate(45deg);
 
-  cursor: pointer;
+
 
   -webkit-tap-highlight-color: transparent;
 }
@@ -522,7 +529,7 @@ a {
   background-color: transparent;
   transform: rotate(45deg);
 
-  cursor: pointer;
+
 }
 
 .search__text {
@@ -564,7 +571,7 @@ a {
 
   transition: opacity .4s;
 
-  cursor: pointer;
+
   opacity: 0;
   pointer-events: none;
 }
@@ -597,7 +604,8 @@ a {
 }
 
 /*============== Gallery style ===============*/
-.gallery {
+.gallery,
+.labs-gallery {
   flex-direction: row;
   flex-wrap: wrap;
 
@@ -613,10 +621,6 @@ a {
   overflow: -moz-scrollbars-none;
 
   -ms-overflow-style: none;
-}
-
-.gallery::-webkit-scrollbar {
-  display: none;
 }
 
 .gallery__item {
@@ -672,4 +676,11 @@ a {
   background-color: rgba(255,75,168, .9);
   box-shadow: 0 -4px 5px 8px rgba(0,0,0, .7);
   border-radius: 20%;
+}
+/*========= labs =========*/
+.labs-gallery__item{
+	width: 480px;
+	height: 550px;
+	margin: 0;
+	margin-right: auto;
 }
