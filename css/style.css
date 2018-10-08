@@ -3,12 +3,15 @@
 :hover {
   transition: all .7s;
 }
-::-webkit-scrollbar{
-	display: none;
+
+::-webkit-scrollbar {
+  display: none;
 }
-::-moz-scrollbar{
-	width: 0;
+
+::-moz-scrollbar {
+  width: 0;
 }
+
 html {
   box-sizing: border-box;
   width: 100vw;
@@ -16,7 +19,6 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-
 }
 
 body {
@@ -30,17 +32,21 @@ body {
   font-size: 26px;
   font-weight: 400;
   color: #fff;
-	cursor: url(../cur1089.cur), progress !important;
+
   background: linear-gradient(to right  bottom, purple, crimson) no-repeat;
+
+  cursor: url(../cur1089.cur), progress !important;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+
   cursor: url(../cur1089.cur), progress !important;
 }
-button{
-	cursor: url(../cur1089.cur), progress !important;
+
+button {
+  cursor: url(../cur1089.cur), progress !important;
 }
 
 /*   Разметка сетки на две части  */
@@ -148,6 +154,7 @@ button{
 
 .nav__item {
   position: relative;
+
   padding: 25px;
   margin-bottom: 50px;
 }
@@ -185,8 +192,8 @@ button{
 
 .nav__link:active {
   color: rgba(255,75,168, .9);
-  transition: .1s;
 
+  transition: .1s;
 }
 
 .nav__link {
@@ -196,12 +203,10 @@ button{
   text-align: center;
   text-decoration: none;
   color: #fff;
-
 }
 
 .nav__link_active {
   color: rgba(255,75,168, .9);
-
 }
 
 /* Подвал с соцсетями */
@@ -357,18 +362,11 @@ button{
 }
 
 .entry__btn_left {
-  padding: 10px 50px;
   margin-right: 40px;
-
-  color: #fff;
-
-  background-color: rgba(93,150,255, .9);
-  box-shadow: 0 0 5px 2px rgba(93,150,255, .9);
-  border: 2px solid rgba(255,255,255, .7);
-  border-radius: 200px 200px 200px 200px;
 }
 
-.entry__btn_right {
+.btn,
+.btn {
   padding: 10px 50px;
 
   color: #fff;
@@ -399,7 +397,7 @@ button{
   height: 50px;
 }
 
-.entry__btn:hover {
+.btn:hover {
   color: #fff;
 
   background-color: rgba(255,75,168, .9);
@@ -488,8 +486,6 @@ button{
   outline: none;
   transform: rotate(45deg);
 
-
-
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -528,8 +524,6 @@ button{
 
   background-color: transparent;
   transform: rotate(45deg);
-
-
 }
 
 .search__text {
@@ -571,7 +565,6 @@ button{
 
   transition: opacity .4s;
 
-
   opacity: 0;
   pointer-events: none;
 }
@@ -604,21 +597,20 @@ button{
 }
 
 /*============== Gallery style ===============*/
-.gallery,
-.labs-gallery {
+.gallery {
   flex-direction: row;
   flex-wrap: wrap;
 
   display: flex;
-  width: 75%;
+  width: 90%;
   height: 800px;
   max-width: 2500px;
   min-width: 760px;
   padding-top: 15px;
   margin-left: 60px;
+  overflow: -moz-scrollbars-none;
   overflow-x: hidden;
   overflow-y: scroll;
-  overflow: -moz-scrollbars-none;
 
   -ms-overflow-style: none;
 }
@@ -629,45 +621,62 @@ button{
   margin: 0 auto;
   margin-bottom: 70px;
 }
-.bg-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0,0,0, 0.3);
-	z-index: 999;
-}
-.gallery__img_zoom{
-	width: 800px;
-	height: 600px;
-	border-radius: 10px;
-	box-shadow: 0px 0px 5px 5px #fff;
-	border-radius: 2px solid #fff;
-}
-@keyframes closeImg{
-	0%{
-		transform: scale(1);
-		opacity: 0;
-	  }
 
-	100%{ transform: scale(0);
-		opacity: 0.8;}
+.bg-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 999;
+
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0,0,0, .2);
 }
-@keyframes openImg{
-	0%{
-		transform: scale(0);
-	  }
-	100%{ transform: scale(1); }
+
+.gallery__img_zoom {
+  width: 800px;
+  height: 600px;
+
+  box-shadow: 0 0 5px 5px #fff;
+  border-radius: 10px;
+  border-radius: 2px solid #fff;
 }
-.bg-open{
-	animation: openImg 1s;
+
+@keyframes closeImg {
+  0% {
+    transform: scale(1);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+
+    opacity: .8;
+  }
 }
-.bg-close{
-	animation:  closeImg 1s;
+
+@keyframes openImg {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bg-open {
+  animation: openImg 1s;
+}
+
+.bg-close {
+  animation: closeImg 1s;
 }
 
 .gallery__img:hover {
@@ -688,7 +697,7 @@ button{
   position: relative;
   top: 0;
 
-  width: 73.8%;
+  width: 90%;
   height: 5px;
   max-width: 2500px;
   min-width: 760px;
@@ -705,7 +714,7 @@ button{
   position: relative;
   top: 0;
 
-  width: 73.8%;
+  width: 90%;
   height: 5px;
   max-width: 2500px;
   min-width: 760px;
@@ -717,21 +726,114 @@ button{
   box-shadow: 0 -4px 5px 8px rgba(0,0,0, .7);
   border-radius: 20%;
 }
-/*========= labs =========*/
-.labs-gallery__item{
-	width: 480px;
-	height: 550px;
-	margin: 0;
-	margin-right: auto;
-	background-color: rgba(250,17,42, .7)
-}
-.labs-gallery__img{
-	width: 479px;
-	height:380px;
-}
-.labs-gallery_text{
 
+/*========= labs =========*/
+.labs-gallery {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  display: flex;
+  width: 90%;
+  height: 800px;
+  max-width: 2500px;
+  min-width: 760px;
+  padding-top: 15px;
+  margin-left: 60px;
+  overflow: -moz-scrollbars-none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  -ms-overflow-style: none;
 }
-.test{
-	margin: 0;
+
+.labs-gallery__item {
+  width: 480px;
+  height: 650px;
+  min-height: 450px;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+  background-color: rgba(10,17,42, .8);
+  border-radius: 5px;
+}
+
+.labs-gallery__img {
+  width: 480px;
+  height: 380px;
+
+  border: -2px solid #fff;
+  border-radius: 5px;
+}
+
+.labs-gallery__title {
+  margin-left: 30px;
+
+  font-size: 26px;
+  color: #fff;
+}
+
+.labs-gallery_text {
+  margin: 0 30px;
+  margin-bottom: 40px;
+
+  font-size: 18px;
+  color: rgba(255,255,255, .60);
+  word-wrap: break-word;
+
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.labs-gallery__link {
+  padding: 10px;
+  margin-left: 30px;
+
+  font-size: 16px;
+  color: #fff;
+}
+
+.blog-content {
+  flex-direction: column;
+  justify-content: center;
+
+  display: flex;
+  width: 60%;
+  height: 600px;
+  overflow-y: scroll;
+
+  color: #fff;
+
+  background-image: url(bg.jpg);
+  box-shadow: 0 0 10px 4px rgba(255,75,168, .7);
+  border: 3px solid rgba(255,255,255, .8);
+  border-radius: 10px;
+}
+
+.blog-content__wrap {
+  flex-direction: column;
+
+  display: flex;
+  width: 90%;
+  padding: 0 5%;
+}
+
+.blog-content__title {
+  margin: 0 auto;
+
+  color: #fff;
+}
+
+.visuallyhidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  border: 0;
 }

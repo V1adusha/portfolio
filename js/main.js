@@ -102,7 +102,6 @@ function onImgClick(event) {
   zoomedIn = true;
 }
 
-
 function closeZoom() {
 
   let findEl = document.getElementsByClassName("bg-body")[0];
