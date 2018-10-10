@@ -78,6 +78,7 @@ function pageLoad() {
     newBtn.classList.add("labs-gallery__btn", "btn");
     newBtn.innerHTML = myBlog[i]["btnText"]
     newBtn.onclick = fullContent;
+    newBtn.value = i;
     newel.appendChild(newBtn);
     console.log(newel);
     document.getElementsByClassName("labs-gallery")[0].appendChild(newel);
@@ -85,12 +86,7 @@ function pageLoad() {
 }
 window.onload = pageLoad;
 
-
-let createFullContent = document.getElementsByClassName("blog-content__container");
-createFullContent[0].addEventListener("click", fullContent, false);
-createFullContent[0].addEventListener("click", fullContent, true);
-
-function fullContent(value) {
+function fullContent(event) {
   let newEl = document.createElement("div");
   newEl.classList.add("bg-body");
   let newBlog = document.createElement("div");
@@ -101,40 +97,65 @@ function fullContent(value) {
   newBlogCtr.classList.add("blog-content__container");
   newBlog.appendChild(newBlogCtr);
 
-  // let newBlogImg = document.createElement("img");
-  // newBlogImg.classList.add("blog-content__img");
-  // newBlogImg.src = myBlog[event.target.src]["fullImg"];
-  // newBlogImg.alt = myBlog[event.currentTarget.value]["altName"];
-  // newBlogCtr.appendChild(newBlogImg);
+  let newBlogImg = document.createElement("img");
+  newBlogImg.classList.add("blog-content__img");
+  newBlogImg.src = myBlog[event.currentTarget.value]["fullImg"];
+  newBlogImg.alt = myBlog[event.currentTarget.value]["altName"];
+  newBlogCtr.appendChild(newBlogImg);
 
   let newBlogWrap = document.createElement("div");
   newBlogWrap.classList.add("blog-content__wrap");
   newBlogCtr.appendChild(newBlogWrap);
 
+
+  let newBlogTitle = document.createElement("h1");
+  newBlogTitle.classList.add("blog-content__title");
+  newBlogTitle.innerHTML = myBlog[event.currentTarget.value]["titleText"];
+  newBlogWrap.appendChild(newBlogTitle);
+
+  let newBlogText = document.createElement("p");
+  newBlogText.classList.add("blog-content__text");
+  newBlogText.innerHTML = myBlog[event.currentTarget.value]["fullText"];
+  newBlogWrap.appendChild(newBlogText);
+
+
   let newBtn = document.createElement("button");
   newBtn.classList.add("blog-content__btn");
   newBtn.innerHTML = "X";
   newBtn.value = event.currentTarget.value;
+  newBtn.onclick = closeContent;
   newBlog.appendChild(newBtn);
   document.getElementsByTagName("body")[0].appendChild(newEl);
 };
 
 
+function closeContent (event){
+  let findEl = document.getElementsByClassName("bg-body")[0];
+  findEl.remove(findEl)
 
+  // let removeContent = document.getElementsByTagName("body");
+  // removeContent.remove();
+}
+
+// for (var i = Things.length - 1; i >= 0; i--) {
+//   let img = createImg(myBlog[i]);
+// };
+// function createImg (props){
+//   let newBlogImg = document.createElement("img");
+//   newBlogImg.src = props.src;
+//   return newBlogImg;
+// }
 // let newBlogImg = document.createElement("img");
-// newBlogImg.classList.add("blog-content__img");
-// newBlogImg.src = myBlog[event.currentTarget.value]["fullImg"];
+// newBlogImg.classList.add("blog-content__img")
 // newBlogImg.alt = myBlog[event.currentTarget.value]["altName"];
 // newBlogCtr.appendChild(newBlogImg);
 
-//  let newBlogTitle = document.createElement("h1");
-//  newBlogTitle.classList.add("blog-content__title");
-//  newBlogTitle.innerHTML = myBlog[event.currentTarget.value]["titleText"];
-//  newBlogWrap.appendChild(newBlogTitle);
 
-//  let newBlogText = document.createElement("p");
-//  newBlogText.classList.add("blog-content__text");
-//  newBlogText.innerHTML = myBlog[event.currentTarget.value]["fullText"];
-//  newBlogWrap.appendChild(newBlogText);
-//  document.getElementsByClassName("blog-content__container")[0].appendChild(newBlogImg);
-// }
+
+
+
+
+
+
+
+
