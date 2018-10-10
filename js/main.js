@@ -65,12 +65,15 @@ function onPageLoad() {
   for (var i = 0; i < myProject.length; i++) {
     let newEl = document.createElement("figure");
     newEl.classList.add("gallery__item");
+
     let newImg = document.createElement("img");
     newImg.classList.add("gallery__img");
     newImg.src = myProject[i]["imgUrl"];
     newImg.alt = myProject[i]["altName"];
     newImg.onclick = onImgClick;
+
     newEl.appendChild(newImg);
+
     let newFig = document.createElement("figcaption");
     newFig.classList.add("gallery__text");
     let newLink = document.createElement("a");
