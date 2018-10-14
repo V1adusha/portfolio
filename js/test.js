@@ -1,54 +1,52 @@
 let myBlog = [{
   name: "first",
   imgUrl: "img/labs-img2.jpg",
-  altName: "Name img",
-  titleText: "Blog pro to to to..",
+  altName: "alt name",
+  titleText: "Lorem ipsum dolor sit amet.",
   discription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
   btnText: "show more",
-  fullImg: "../img/bg.jpg",
-  fullText: "",
-  numberBlog: "1"
-
-}, {
-  name: "first",
+  fullImg: "img/home-work1-large.png",
+  fullText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum dolorum labore sunt doloremque dolores, laudantium amet accusamus ipsam quaerat, veniam, inventore, hic expedita consectetur quibusdam! Praesentium assumenda architecto officia cumque voluptate nesciunt consectetur, veniam quas laborum optio blanditiis adipisci quod aspernatur quam, necessitatibus explicabo ad ex. Molestias, veritatis, qui."
+},
+{
+  name: "second",
   imgUrl: "img/labs-img2.jpg",
-  altName: "Name img",
-  titleText: "Blog pro to to to..",
+  altName: "alt name",
+  titleText: "Lorem ipsum dolor sit amet.",
   discription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
   btnText: "show more",
-  fullImg: "",
-  fullText: "",
-  numberBlog: "2"
-}, {
-  name: "first",
+  fullImg: "img/home-work1-large.png",
+  fullText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum dolorum labore sunt doloremque dolores, laudantium amet accusamus ipsam quaerat, veniam, inventore, hic expedita consectetur quibusdam! Praesentium assumenda architecto officia cumque voluptate nesciunt consectetur, veniam quas laborum optio blanditiis adipisci quod aspernatur quam, necessitatibus explicabo ad ex. Molestias, veritatis, qui."
+},
+{
+  name: "three",
   imgUrl: "img/labs-img2.jpg",
-  altName: "Name img",
-  titleText: "Blog pro to to to..",
+  altName: "alt name",
+  titleText: "Lorem ipsum dolor sit amet.",
   discription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
   btnText: "show more",
-  fullImg: "",
-  fullText: "",
-  numberBlog: "3"
-}, {
-  name: "first",
+  fullImg: "img/home-work1-large.png",
+  fullText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum dolorum labore sunt doloremque dolores, laudantium amet accusamus ipsam quaerat, veniam, inventore, hic expedita consectetur quibusdam! Praesentium assumenda architecto officia cumque voluptate nesciunt consectetur, veniam quas laborum optio blanditiis adipisci quod aspernatur quam, necessitatibus explicabo ad ex. Molestias, veritatis, qui."
+},
+{
+  name: "fore",
   imgUrl: "img/labs-img2.jpg",
-  altName: "Name img",
-  titleText: "Blog pro to to to..",
+  altName: "alt name",
+  titleText: "Lorem ipsum dolor sit amet.",
   discription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
   btnText: "show more",
-  fullImg: "",
-  fullText: "",
-  numberBlog: "4"
-}, {
-  name: "first",
+  fullImg: "img/home-work1-large.png",
+  fullText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum dolorum labore sunt doloremque dolores, laudantium amet accusamus ipsam quaerat, veniam, inventore, hic expedita consectetur quibusdam! Praesentium assumenda architecto officia cumque voluptate nesciunt consectetur, veniam quas laborum optio blanditiis adipisci quod aspernatur quam, necessitatibus explicabo ad ex. Molestias, veritatis, qui."
+},
+{
+  name: "five",
   imgUrl: "img/labs-img2.jpg",
-  altName: "Name img",
-  titleText: "Blog pro to to to..",
+  altName: "alt name",
+  titleText: "Lorem ipsum dolor sit amet.",
   discription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
   btnText: "show more",
-  fullImg: "",
-  fullText: "",
-  numberBlog: "5"
+  fullImg: "img/home-work1-large.png",
+  fullText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum dolorum labore sunt doloremque dolores, laudantium amet accusamus ipsam quaerat, veniam, inventore, hic expedita consectetur quibusdam! Praesentium assumenda architecto officia cumque voluptate nesciunt consectetur, veniam quas laborum optio blanditiis adipisci quod aspernatur quam, necessitatibus explicabo ad ex. Molestias, veritatis, qui."
 }];
 
 function pageLoad() {
