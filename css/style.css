@@ -1134,7 +1134,8 @@ button {
   only screen and (     -o-min-device-pixel-ratio: 2/1),
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 326dpi),
-  only screen and (                min-resolution: 2dppx) {
+  only screen and (                min-resolution: 2dppx),
+  only screen and (min-width: 320px) and (orientation: portrait){
     /* Retina styles here */
 .container {
     flex-direction: column;
